@@ -34,10 +34,7 @@ function GradientIcon({
           borderRadius: size / 4,
         },
         elevated && {
-          shadowColor: gradientColors[0],
-          shadowOffset: { width: 0, height: 4 },
-          shadowOpacity: 0.3,
-          shadowRadius: 8,
+          boxShadow: `0 4 8 ${gradientColors[0]}4D`,
           elevation: 4,
         },
         style,

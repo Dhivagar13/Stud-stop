@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
   container: { flex: 1 },
   profileCard: { margin: 16, padding: 20, borderRadius: borderRadius.xl, overflow: 'hidden', borderWidth: 1, borderColor: 'rgba(255,255,255,0.15)' },
   avatarRow: { flexDirection: 'row', alignItems: 'center' },
-  avatar: { width: 60, height: 60, borderRadius: 30, alignItems: 'center', justifyContent: 'center', shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.3, shadowRadius: 8, elevation: 8, borderWidth: 2 },
+  avatar: { width: 60, height: 60, borderRadius: 30, alignItems: 'center', justifyContent: 'center', boxShadow: '0 4 8 rgba(0,0,0,0.3)', elevation: 8, borderWidth: 2 },
   avatarOverlay: { position: 'absolute', width: 60, height: 60, borderRadius: 30, alignItems: 'center', justifyContent: 'center' },
   skillsRow: { flexDirection: 'row', flexWrap: 'wrap', paddingHorizontal: 16 },
   addSkillBtn: { borderWidth: 1, borderStyle: 'dashed', paddingHorizontal: 12, paddingVertical: 4, borderRadius: 16, marginBottom: 6 },

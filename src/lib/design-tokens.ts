@@ -23,44 +23,34 @@ export const animation = {
 
 export const shadows: Record<string, ViewStyle & { elevation?: number }> = {
   soft: {
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.08,
-    shadowRadius: 8,
+    boxShadow: '0 2 8 rgba(0,0,0,0.08)',
     elevation: 2,
   },
   medium: {
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.12,
-    shadowRadius: 16,
+    boxShadow: '0 6 16 rgba(0,0,0,0.12)',
     elevation: 4,
   },
   hard: {
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 10 },
-    shadowOpacity: 0.18,
-    shadowRadius: 24,
+    boxShadow: '0 10 24 rgba(0,0,0,0.18)',
     elevation: 8,
   },
 };
 
 export function coloredShadow(color: string, intensity = 0.2): ViewStyle {
-  return {
-    shadowColor: color,
-    shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: intensity,
-    shadowRadius: 16,
-    elevation: 6,
-  };
+  const match = color.match(/[\d.]+/g);
+  if (match && match.length >= 3) {
+    const [r, g, b] = match;
+    return { boxShadow: `0 6 16 rgba(${r},${g},${b},${intensity})`, elevation: 6 };
+  }
+  return { boxShadow: `0 6 16 ${color}`, elevation: 6 };
 }
 
 export const gradients = {
   accent: (a: string, b: string) => [a, b] as const,
-  warm: ['#E8A637', '#C94A2A'] as const,
-  teal: ['#2D8A5E', '#1A6B5A'] as const,
-  gold: ['#C9952E', '#E8A637'] as const,
-  emerald: ['#2D8A5E', '#3DA07A'] as const,
+  warm: ['#E8926A', '#D4744A'] as const,
+  rose: ['#D48A7A', '#C47464'] as const,
+  gold: ['#E8C9A0', '#D4A870'] as const,
+  sage: ['#5B8A72', '#4A7A62'] as const,
   dark: ['#1A1512', '#2A231E'] as const,
 };
 

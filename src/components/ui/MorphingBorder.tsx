@@ -16,8 +16,8 @@ interface MorphingBorderProps {
   animated?: boolean;
 }
 
-const DEFAULT_COLORS_LIGHT = ['#8B2F3B', '#C9A84C', '#1A6B5A', '#8B2F3B'];
-const DEFAULT_COLORS_DARK = ['#E8A637', '#C9952E', '#2D8A5E', '#E8A637'];
+const DEFAULT_COLORS_LIGHT = ['#D4744A', '#E8C9A0', '#B88B6A', '#D4744A'];
+const DEFAULT_COLORS_DARK = ['#E8926A', '#D4A870', '#B88B6A', '#E8926A'];
 
 function MorphingBorder({
   children, style, borderRadius = 28, borderWidth = 2,

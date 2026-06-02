@@ -339,7 +339,7 @@ export default function DashboardScreen() {
 }
 
 function stringToColor(str: string): string {
-  const colors = ['#8B2F3B', '#1A6B5A', '#C9A84C', '#C94A2A', '#3A7D5C', '#D4942E'];
+  const colors = ['#D4744A', '#E8C9A0', '#B88B6A', '#C94A3A', '#5B8A72', '#D4A030'];
   let hash = 0;
   for (let i = 0; i < str.length; i++) hash = str.charCodeAt(i) + ((hash << 5) - hash);
   return colors[Math.abs(hash) % colors.length];
